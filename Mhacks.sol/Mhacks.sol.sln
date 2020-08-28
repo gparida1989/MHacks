@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mhacks.Promotion.Engine", "Mhacks.sol\Mhacks.Promotion.Engine.csproj", "{9F7B23A3-9C95-4FB7-96BE-CBD5C60462A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Appliction", "Appliction", "{7D57832A-C34B-4C65-9BEC-21D092091D10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F3B7F3F1-1DE9-4C6C-8ACE-A4A816707CD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mhacks.Cart", "Mhacks.Cart\Mhacks.Cart.csproj", "{F4F82FAE-730A-44B9-9B5C-E94FE50D0E0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mhacks.Models", "Mhacks.Models\Mhacks.Models.csproj", "{934C6581-EBDD-4E42-815F-F7F9FE988554}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{8105ECBB-5EA7-4996-9497-863E1402712C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mhacks.Xunit.Runner", "Mhacks.Xunit.Runner\Mhacks.Xunit.Runner.csproj", "{7F50CE59-BD83-4204-B0C8-6B478FF3A91E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F7B23A3-9C95-4FB7-96BE-CBD5C60462A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7B23A3-9C95-4FB7-96BE-CBD5C60462A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7B23A3-9C95-4FB7-96BE-CBD5C60462A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7B23A3-9C95-4FB7-96BE-CBD5C60462A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F82FAE-730A-44B9-9B5C-E94FE50D0E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F82FAE-730A-44B9-9B5C-E94FE50D0E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F82FAE-730A-44B9-9B5C-E94FE50D0E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F82FAE-730A-44B9-9B5C-E94FE50D0E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{934C6581-EBDD-4E42-815F-F7F9FE988554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{934C6581-EBDD-4E42-815F-F7F9FE988554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{934C6581-EBDD-4E42-815F-F7F9FE988554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{934C6581-EBDD-4E42-815F-F7F9FE988554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F50CE59-BD83-4204-B0C8-6B478FF3A91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F50CE59-BD83-4204-B0C8-6B478FF3A91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F50CE59-BD83-4204-B0C8-6B478FF3A91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F50CE59-BD83-4204-B0C8-6B478FF3A91E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F7B23A3-9C95-4FB7-96BE-CBD5C60462A2} = {7D57832A-C34B-4C65-9BEC-21D092091D10}
+		{F4F82FAE-730A-44B9-9B5C-E94FE50D0E0B} = {7D57832A-C34B-4C65-9BEC-21D092091D10}
+		{934C6581-EBDD-4E42-815F-F7F9FE988554} = {F3B7F3F1-1DE9-4C6C-8ACE-A4A816707CD9}
+		{7F50CE59-BD83-4204-B0C8-6B478FF3A91E} = {8105ECBB-5EA7-4996-9497-863E1402712C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DE6B720-5E39-45AD-9AFB-56DD321D9E97}
+	EndGlobalSection
+EndGlobal
