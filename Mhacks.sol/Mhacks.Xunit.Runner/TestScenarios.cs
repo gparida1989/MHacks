@@ -1,10 +1,13 @@
 ﻿using Mhacks.Models;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace Mhacks.Xunit.Runner
 {
-    public class TestDataGenerator : IEnumerable<object[]>
+    public class TestData
+    {
+        public CartItem[] CartItems { get; set; }
+        public double ExpectedTotalAmount { get; set; }
+    }
+    public class TestScenarios
     {
         static CartItem[] d1 = new CartItem[]
         {
@@ -28,14 +31,8 @@ namespace Mhacks.Xunit.Runner
             new CartItem() { Item= new SKU() { Price = 15, SkuId = 'D' }, Quantity=1 }
         };
 
-
-        private readonly List<CartItem[]> _data = new List<CartItem[]> { d1, d2, d3 };
-
-        public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return ((IEnumerable)_data).GetEnumerator();
-        }
+        public static TestData Scenario1 = new TestData { CartItems = d1, ExpectedTotalAmount = 100 };
+        public static TestData Scenario2 = new TestData { CartItems = d2, ExpectedTotalAmount = 370 };
+        public static TestData Scenario3 = new TestData { CartItems = d3, ExpectedTotalAmount = 280 };
     }
 }

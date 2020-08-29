@@ -1,7 +1,6 @@
 ﻿using Mhacks.Models;
 using Mhacks.Models.Abstrations;
 using Mhacks.Store;
-using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -25,18 +24,20 @@ namespace Mhacks.Xunit.Runner
             Assert.Equal(3, _pstore.ActivePromotions.Count);
             Assert.Equal(4, _sstore.SKUs.Count);
 
-            Assert.True( _sstore.SKUs[0].Equals(_pstore.ActivePromotions.Values.First().Items[0].Item));
+            Assert.True(_sstore.SKUs[0].Equals(_pstore.ActivePromotions.Values.First().Items[0].Item));
 
         }
 
         [Theory]
-        [ClassData(typeof(TestDataGenerator))]
-        public void TestScenario(params CartItem[] cartItems)
+        [ClassData(typeof(CartTestData))]
+        public void TestScenario(CartItem[] cartItems, double expectedCartTotalAmount)
         {
             _cart = new Cart();
             _cart.Items.AddRange(cartItems);
 
-            var t = _cart.Items;
+            var total = _cart.GetCartTotalAmount();
+
+            Assert.Equal(expectedCartTotalAmount, total);
         }
 
     }
