@@ -35,9 +35,9 @@ namespace Mhacks.Xunit.Runner
     {
         public CartTestData()
         {
-            //Add(TestScenarios.Scenario1.CartItems, TestScenarios.Scenario1.ExpectedTotalAmount);
+            Add(TestScenarios.Scenario1.CartItems, TestScenarios.Scenario1.ExpectedTotalAmount);
             Add(TestScenarios.Scenario2.CartItems, TestScenarios.Scenario2.ExpectedTotalAmount);
-            //Add(TestScenarios.Scenario3.CartItems, TestScenarios.Scenario3.ExpectedTotalAmount);
+            Add(TestScenarios.Scenario3.CartItems, TestScenarios.Scenario3.ExpectedTotalAmount);
 
         }
     }
