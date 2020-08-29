@@ -1,4 +1,5 @@
-﻿using Mhacks.Models;
+﻿using Mhacks.Cart.Engine;
+using Mhacks.Models;
 using Mhacks.Models.Abstrations;
 using Mhacks.Store;
 using System.Linq;
@@ -10,7 +11,13 @@ namespace Mhacks.Xunit.Runner
     {
         IPromoStoreManager _pstore;
         ISkuStoreManager _sstore;
-        Cart _cart;
+        ICartValueCalculator _cartProcess;
+        Models.Cart _cart;
+
+        public PromoCalcTest()
+        {
+            _cartProcess = new CheckoutProcess();
+        }
 
         [Fact]
         public void TestSetup()
@@ -32,10 +39,10 @@ namespace Mhacks.Xunit.Runner
         [ClassData(typeof(CartTestData))]
         public void TestScenario(CartItem[] cartItems, double expectedCartTotalAmount)
         {
-            _cart = new Cart();
+            _cart = new Models.Cart();
             _cart.Items.AddRange(cartItems);
 
-            var total = _cart.GetCartTotalAmount();
+            var total = _cartProcess.GetTotalCartValue(_cart);
 
             Assert.Equal(expectedCartTotalAmount, total);
         }

@@ -29,7 +29,7 @@ namespace Mhacks.Store
                 );
         }
 
-        int MaxKey() => _activePromos.Count > 0 ?_activePromos.Keys.Max() : 0;
+        int MaxKey() => _activePromos.Count > 0 ? _activePromos.Keys.Max() : 0;
 
         public void AddToStore(IList<Models.Promotion> promos)
         {
@@ -70,16 +70,16 @@ namespace Mhacks.Store
 
         public void AddToStore(Promotion promos)
         {
-            if (promos == null )
+            if (promos == null)
                 throw new MhackExc(AppConstants.INVALID_INPUT) { Type = ErrorStatus.ValidationFail };
 
             var lastKey = MaxKey();
             int newKey = lastKey + 1;
             _activePromos.Add(newKey, promos);
-            
+
         }
 
         public void Clear() => _activePromos.Clear();
-        
+
     }
 }

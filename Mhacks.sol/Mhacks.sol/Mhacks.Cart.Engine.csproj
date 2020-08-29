@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mhacks.Models\Mhacks.Models.csproj" />
+    <ProjectReference Include="..\Mhacks.Promotion.Store\Mhacks.Store.csproj" />
   </ItemGroup>
 
 </Project>

@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mhacks.Promotion.Store\Mhacks.Store.csproj" />
-    <ProjectReference Include="..\Mhacks.sol\Mhacks.Promotion.Engine.csproj" />
+    <ProjectReference Include="..\Mhacks.sol\Mhacks.Cart.Engine.csproj" />
   </ItemGroup>
 
 </Project>

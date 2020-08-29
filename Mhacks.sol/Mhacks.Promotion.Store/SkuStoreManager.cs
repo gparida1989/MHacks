@@ -7,7 +7,7 @@ namespace Mhacks.Store
 {
     public class SkuStoreManager : ISkuStoreManager
     {
-        private readonly IList<SKU> _skus= new List<SKU>();
+        private readonly IList<SKU> _skus = new List<SKU>();
         public IList<SKU> SKUs => _skus;
 
         public void AddToStore(SKU sku)
@@ -18,7 +18,7 @@ namespace Mhacks.Store
         }
 
         public void Clear() => _skus.Clear();
-       
+
 
         public void RemoveFromStore(SKU sku)
         {
