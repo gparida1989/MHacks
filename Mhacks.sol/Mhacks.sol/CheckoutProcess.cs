@@ -34,11 +34,7 @@ namespace Mhacks.Cart.Engine
             {
                 var appliedPromo = _pstore.ActivePromotions[promoId];
 
-                foreach (var cartItem in _cart.Items)
-                {
-                    //var promo1check = appliedPromo.Items.Where(w => w.Item == cartItem.Item && w.Quantity <= cartItem.Quantity)
-                    //    .Select(s => s.Item).ToList();
-                }
+                total += appliedPromo.ApplyOnCart(_cart);
             }
             if (_cart.Items.Count == 0) return 0d;
 
@@ -53,26 +49,22 @@ namespace Mhacks.Cart.Engine
                 var appliedPromoId = -1;
                 foreach (var promo in orderedPromos)
                 {
-                    //if (isPromoApplicable(promo.Value))
-                    //{
-                    //    appliedPromoId = promo.Key;
-                    //    break;
-                    //}
+                    if (promo.Value.IsApplicable(_cart))
+                    {
+                        appliedPromoId = promo.Key;
+                        break;
+                    }
                 }
 
                 if(appliedPromoId == -1) normalTotal();
                 else
                 {
-
+                    promoTotal(appliedPromoId);
                 }
             }
 
             return total;
         }
 
-        bool isPromoApplicable(Promotion promotion)
-        {
-            return true;
-        }
     }
 }
