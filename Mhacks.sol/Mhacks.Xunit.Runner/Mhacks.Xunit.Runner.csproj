@@ -15,4 +15,9 @@
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Mhacks.Promotion.Store\Mhacks.Store.csproj" />
+    <ProjectReference Include="..\Mhacks.sol\Mhacks.Promotion.Engine.csproj" />
+  </ItemGroup>
+
 </Project>

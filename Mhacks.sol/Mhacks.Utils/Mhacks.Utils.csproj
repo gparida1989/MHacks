@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mhacks.Utils\Mhacks.Utils.csproj" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 
 </Project>
