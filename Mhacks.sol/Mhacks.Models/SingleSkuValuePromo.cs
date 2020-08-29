@@ -26,8 +26,8 @@ namespace Mhacks.Models
                 {
                     Item = item.Item
                 };
-                var originalQuantity = cart.Items.Where(w => w.Item == nci.Item).Select(s => s.Quantity).FirstOrDefault();
-                nci.Quantity = originalQuantity == 0 ? 0 : originalQuantity - item.Quantity;
+                var promoItem = PromoDetail.Items.FirstOrDefault();
+                nci.Quantity = promoItem == null ? 0 : item.Quantity - promoItem.Quantity;
                 normalCartItems.Add(nci);
             }
             total += NormalCartTotal(normalCartItems);

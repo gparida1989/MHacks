@@ -21,7 +21,8 @@ namespace Mhacks.Models
         {
             var promo = PromoDetail.Items.FirstOrDefault();
 
-            return cart.Items.Any(w => w.Item == promo.Item && w.Quantity >= promo.Quantity);
+            return  cart.Items.Any(w => w.Item.Equals(promo.Item) && w.Quantity >= promo.Quantity);
+
         }
 
         protected double NormalCartTotal(IList<CartItem> _cartItems)
@@ -61,7 +62,7 @@ namespace Mhacks.Models
             bool matched = false;
             foreach (var promo in PromoDetail.Items)
             {
-                matched= cart.Items.Any(w => w.Item == promo.Item && w.Quantity >= promo.Quantity);
+                matched= cart.Items.Any(w => w.Item.Equals(promo.Item) && w.Quantity >= promo.Quantity);
 
             }
             return matched;

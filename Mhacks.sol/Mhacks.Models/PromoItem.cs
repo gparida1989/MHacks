@@ -3,6 +3,6 @@
     public class PromoItem
     {
         public SKU Item { get; set; }
-        public long Quantity { get; set; }
+        public int Quantity { get; set; }
     }
 }

@@ -32,7 +32,7 @@ namespace Mhacks.Xunit.Runner
         };
 
         public static TestData Scenario1 = new TestData { CartItems = d1, ExpectedTotalAmount = 100 };
-        public static TestData Scenario2 = new TestData { CartItems = d2, ExpectedTotalAmount = 370 };
+        public static TestData Scenario2 = new TestData { CartItems = d2, ExpectedTotalAmount = 400 };
         public static TestData Scenario3 = new TestData { CartItems = d3, ExpectedTotalAmount = 280 };
     }
 }

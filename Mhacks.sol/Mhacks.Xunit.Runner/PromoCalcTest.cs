@@ -7,6 +7,11 @@ using Xunit;
 
 namespace Mhacks.Xunit.Runner
 {
+    /*****************************************************************************************************************
+     * The promos are MUTUTALLY EXCLUSIVE
+     * ONE PROMO APPLIED AT TIME
+     * THE HIGHSEST VALUE PROMO TAKES PRECEDENCE
+     */
     public class PromoCalcTest
     {
         IPromoStoreManager _pstore;
@@ -29,6 +34,8 @@ namespace Mhacks.Xunit.Runner
             Assert.True(_sstore.SKUs[0].Equals(_pstore.ActivePromotions.Values.First().PromoDetail.Items[0].Item));
 
         }
+
+
 
         [Theory]
         [ClassData(typeof(CartTestData))]
