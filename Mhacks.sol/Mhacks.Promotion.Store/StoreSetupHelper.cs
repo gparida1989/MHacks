@@ -42,35 +42,39 @@ namespace Mhacks.Store
                     {
                         PromotionPrice = 130,
                         Items = new List<PromoItem>()
-                    {
-                        new PromoItem(){ Item = new SKU() { Price = 50, SkuId = 'A' }, Quantity=3}
-                    }
+                        {
+                            new PromoItem(){ Item = new SKU() { Price = 50, SkuId = 'A' }, Quantity=3}
+                        }
                     };
-                    _promoStore.AddToStore(promo1);
+
+                    var singleskupromo1 = new SingleSkuValuePromo(promo1);
+                    _promoStore.AddToStore(singleskupromo1);
 
                     var promo2 = new Promotion
                     {
                         PromotionPrice = 45,
                         Items = new List<PromoItem>()
-                    {
-                        new PromoItem(){ Item = new SKU() { Price = 30, SkuId = 'B' }, Quantity=2}
-                    }
+                        {
+                            new PromoItem(){ Item = new SKU() { Price = 30, SkuId = 'B' }, Quantity=2}
+                        }
                     };
-                    _promoStore.AddToStore(promo2);
+
+                    var singleskupromo2 = new SingleSkuValuePromo(promo2);
+                    _promoStore.AddToStore(singleskupromo2);
 
                     var promo3 = new Promotion
                     {
                         PromotionPrice = 30,
                         Items = new List<PromoItem>()
-                    {
-                        new PromoItem(){ Item = new SKU() { Price = 20, SkuId = 'C' }, Quantity=1},
-                        new PromoItem(){ Item = new SKU() { Price = 15, SkuId = 'D' }, Quantity=1}
-                    }
+                        {
+                            new PromoItem(){ Item = new SKU() { Price = 20, SkuId = 'C' }, Quantity=1},
+                            new PromoItem(){ Item = new SKU() { Price = 15, SkuId = 'D' }, Quantity=1}
+                        }
                     };
-                    _promoStore.AddToStore(promo3);
+                    var mixedskupromo1 = new MixedSkuValuePromo(promo3);
+                    _promoStore.AddToStore(mixedskupromo1);
 
                 }
-
 
                 return _promoStore;
             }

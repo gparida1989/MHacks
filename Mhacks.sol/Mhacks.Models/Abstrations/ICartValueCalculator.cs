@@ -2,6 +2,6 @@
 {
     public interface ICartValueCalculator
     {
-        double GetTotalCartValue(Cart cart);
+        double GetTotalCartValue();
     }
 }

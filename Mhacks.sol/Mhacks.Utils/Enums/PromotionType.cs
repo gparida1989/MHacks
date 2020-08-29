@@ -2,7 +2,7 @@
 {
     public enum PromotionType
     {
-        FixedItem1,
-        FixedItem2
+        FixedSingleItem,
+        FixedDoubleItem
     }
 }

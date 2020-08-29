@@ -26,11 +26,13 @@ namespace Mhacks.Xunit.Runner
                 PromotionPrice = 100
             };
 
-            Promotion nm = null;
+            var singleskupromo1 = new SingleSkuValuePromo(promos);
+
+            SingleSkuValuePromo nm = null;
             Assert.Equal(0, _store.ActivePromotions.Count);
             Assert.Throws<MhackExc>(() => _store.AddToStore(nm));
 
-            _store.AddToStore(promos);
+            _store.AddToStore(singleskupromo1);
 
             Assert.Equal(1, _store.ActivePromotions.Count);
             _store.Clear();

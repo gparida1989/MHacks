@@ -14,11 +14,6 @@ namespace Mhacks.Xunit.Runner
         ICartValueCalculator _cartProcess;
         Models.Cart _cart;
 
-        public PromoCalcTest()
-        {
-            _cartProcess = new CheckoutProcess();
-        }
-
         [Fact]
         public void TestSetup()
         {
@@ -31,7 +26,7 @@ namespace Mhacks.Xunit.Runner
             Assert.Equal(3, _pstore.ActivePromotions.Count);
             Assert.Equal(4, _sstore.SKUs.Count);
 
-            Assert.True(_sstore.SKUs[0].Equals(_pstore.ActivePromotions.Values.First().Items[0].Item));
+            Assert.True(_sstore.SKUs[0].Equals(_pstore.ActivePromotions.Values.First().PromoDetail.Items[0].Item));
 
         }
 
@@ -41,8 +36,9 @@ namespace Mhacks.Xunit.Runner
         {
             _cart = new Models.Cart();
             _cart.Items.AddRange(cartItems);
+            _cartProcess = new CheckoutProcess(_cart);
 
-            var total = _cartProcess.GetTotalCartValue(_cart);
+            var total = _cartProcess.GetTotalCartValue();
 
             Assert.Equal(expectedCartTotalAmount, total);
         }
