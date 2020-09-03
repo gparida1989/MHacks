@@ -10,3 +10,7 @@ Hackathon code to be shared to HR
 ```
 # START UP FILE & TEST
     Mhacks.Xunit.Runner.PromoCalcTest IS THE TEST FILE
+
+
+#Env Setup
+    This is built using Dot Net core 3.1.4 
